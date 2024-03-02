@@ -20,7 +20,7 @@ public class CommonUtilities {
     public WebDriver driver;
 
     public boolean status = false;
-    CommonUtilities(){
+    public CommonUtilities(){
     }
     public Logger initilizeLog(String methodName){
         return LogManager.getLogger(methodName);
@@ -59,7 +59,7 @@ public class CommonUtilities {
         return screenshotPath;
     }
     public boolean verifyPageTitle(String exp_title, WebElement element) {
-        if (getPageTitle(element).equalsIgnoreCase(exp_title)) {
+        if (getText(element).equalsIgnoreCase(exp_title)) {
             status = true;
         }
         return status;
@@ -76,7 +76,7 @@ public class CommonUtilities {
                driver.navigate().refresh();
        }
     }
-    public String getPageTitle(WebElement element){
+    public String getText(WebElement element) {
         return element.getAttribute("text");
     }
 }

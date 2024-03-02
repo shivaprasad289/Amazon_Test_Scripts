@@ -7,6 +7,7 @@ import com.automationExcerise.Utilities.Base;
 import com.automationExcerise.Utilities.CustomerListener;
 import com.aventstack.extentreports.Status;
 import org.apache.logging.log4j.LogManager;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -25,6 +26,6 @@ public class TC_02_LoginPage_cases extends Base {
         homePage = loginPage.login(fileReader.readDataFromPropertyFile("SignInPhoneNumber"),fileReader.readDataFromPropertyFile("Password"));
         test.log(Status.INFO,"Login with valid credentials");
         log.info("Login with valid credentials");
+        Assert.assertTrue(commonUtils.verifyPageTitle(fileReader.readDataFromPropertyFile("expected_signup_launch_page_title"), launchPage.getPageTitleElement()),"TC_01_HomePage_cases page title is not mismatching...");
     }
-
 }

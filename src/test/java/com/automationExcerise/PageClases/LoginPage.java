@@ -1,8 +1,8 @@
 package com.automationExcerise.PageClases;
 
 import com.automationExcerise.Utilities.Base;
+import com.automationExcerise.Utilities.CommonUtilities;
 import com.automationExcerise.Utilities.ElementUtils;
-import com.aventstack.extentreports.Status;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,6 +25,24 @@ public class LoginPage extends Base{
     @FindBy(id = "signInSubmit")
     private WebElement signInBtn;
 
+    @FindBy(xpath = "//div[@id='auth-error-message-box']/descendant::span")
+    private WebElement phNowarningMsg;
+
+    @FindBy(xpath = "//div[@id='auth-error-message-box']/descendant::li")
+    private WebElement pwdWarningMsg;
+    public String get_PhNo_warning_msg(){
+        return phNowarningMsg.getText();
+    }
+    public String get_pwd_warning_msg(){
+        return pwdWarningMsg.getText();
+    }
+    public void click_on_conntinueBtn(){
+        elementUtils.wait_and_click_on_element(continue_btn);
+    }
+    public void enterPhoneNumber(String phoneNumber){
+        elementUtils.wait_and_enter_text(emailOrPhoneTxtFiled,phoneNumber);
+    }
+
     private Logger log;
     public  HomePage login(String emailOrPhone,String password){
         elementUtils.wait_and_enter_text(emailOrPhoneTxtFiled,emailOrPhone);
@@ -39,5 +57,6 @@ public class LoginPage extends Base{
         PageFactory.initElements(driver,this);
         log = LogManager.getLogger(this.getClass().getName());
         elementUtils =  new ElementUtils(driver);
+        commonUtils = new CommonUtilities();
     }
 }

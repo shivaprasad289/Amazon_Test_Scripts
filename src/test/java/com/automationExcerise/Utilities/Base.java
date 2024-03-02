@@ -17,18 +17,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 public abstract class Base {
-    private String browserName;
-    private String applicationUrl;
-    public static WebDriver driver;
+     public static WebDriver driver;
     protected PropertyFileReader fileReader;
     public Logger log;
     private ExtentSparkReporter sprakreporter;
@@ -36,21 +32,21 @@ public abstract class Base {
     public static ExtentTest test;
     public String extentReportFilePath;
     public ElementUtils elementUtils;
-     public String methodName;
     public LaunchingPage launchPage;
     public LoginPage loginPage;
     public HomePage homePage;
     public CommonUtilities commonUtils;
-
-    @BeforeClass
+    public SoftAssert softAssert;
+    @BeforeMethod
     public void setUp(){
         commonUtils = new CommonUtilities();
         fileReader = new PropertyFileReader();
+        softAssert = new SoftAssert();
         driver = commonUtils.intitlize_browser(fileReader.readDataFromPropertyFile("browser"));
         commonUtils.launch_application(fileReader.readDataFromPropertyFile("url"));
       //  commonUtils.hard_refresh(driver,fileReader.readDataFromPropertyFile("expected_signup_launch_page_title"),commonUtils.getPageTitle(launchPage.getPageTitleElement()));
     }
-    @AfterClass
+    @AfterMethod
     public void teatDown(){
         driver.close();
     }
