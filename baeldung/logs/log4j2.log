@@ -1,0 +1,20 @@
+[INFO ] 2024-02-22 17:35:21.505 [main] PropertyFileReader - Reading the browser from property file
+[INFO ] 2024-02-22 17:35:26.076 [main] PropertyFileReader - Reading the url from property file
+[INFO ] 2024-02-22 17:35:26.077 [main] BaseClasses - Launching browser
+[INFO ] 2024-02-22 17:35:31.995 [main] BaseClasses - Opening application
+[INFO ] 2024-02-22 17:35:32.726 [main] LoginTest - Click on signup or login link
+[INFO ] 2024-02-22 17:35:35.735 [main] HomePage - Clicked on Signup/login button
+[INFO ] 2024-02-22 17:35:35.736 [main] PropertyFileReader - Reading the expected_signup_login_page_title from property file
+[INFO ] 2024-02-22 17:35:35.737 [main] LoginTest - Verifying page title of the page:- Automation Exercise - Signup / Login
+[INFO ] 2024-02-22 17:35:35.753 [main] LoginPage - LoginTest page title is matching
+[INFO ] 2024-02-22 17:35:35.762 [main] BaseClasses - Closing browser
+[INFO ] 2024-02-22 17:37:12.479 [main] PropertyFileReader - Reading the browser from property file
+[INFO ] 2024-02-22 17:37:16.966 [main] PropertyFileReader - Reading the url from property file
+[INFO ] 2024-02-22 17:37:16.967 [main] BaseClasses - Launching browser
+[INFO ] 2024-02-22 17:37:20.521 [main] BaseClasses - Opening application
+[INFO ] 2024-02-22 17:37:20.868 [main] LoginTest - Click on signup or login link
+[INFO ] 2024-02-22 17:37:21.982 [main] HomePage - Clicked on Signup/login button
+[INFO ] 2024-02-22 17:37:21.983 [main] PropertyFileReader - Reading the expected_signup_login_page_title from property file
+[INFO ] 2024-02-22 17:37:21.986 [main] LoginTest - Verifying page title of the page:- Automation Exercise - Signup / Login
+[INFO ] 2024-02-22 17:37:22.005 [main] LoginPage - LoginTest page title is matching
+[INFO ] 2024-02-22 17:37:22.013 [main] BaseClasses - Closing browser

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.automationExcerise.Utilities.CustomerListener"/>
+    </listeners>
+    <test name="Test 1">
+        <classes>
+            <class name="com.automationExcerise.TestCases.TC_01_HomePage_cases"/>
+            <class name="com.automationExcerise.TestCases.TC_02_LoginPage_cases">
+            </class>
+        </classes>
+    </test>
+</suite>
