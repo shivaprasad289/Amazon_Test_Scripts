@@ -1,16 +1,9 @@
 package com.automationExcerise.TestCases;
 
-import com.automationExcerise.PageClases.HomePage;
 import com.automationExcerise.PageClases.LaunchingPage;
-import com.automationExcerise.PageClases.LoginPage;
 import com.automationExcerise.Utilities.Base;
-import com.automationExcerise.Utilities.CustomerListener;
 import com.aventstack.extentreports.Status;
-import org.apache.logging.log4j.LogManager;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 //@Listeners(CustomerListener.class)
